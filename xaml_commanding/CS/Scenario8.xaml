@@ -41,43 +41,41 @@
                     </TextBlock>
                 </StackPanel>
 
-                <Grid Grid.Row="1">
-                    <local:DynamicCommandBar VerticalAlignment="Bottom" ContentMinWidth="196">
-                        <local:DynamicCommandBar.Content>
-                            <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" VerticalAlignment="Top" Margin="12,8" Text="Content Area"/>
-                        </local:DynamicCommandBar.Content>
-                        <AppBarButton Icon="Accept" Label="Accept"/>
-                        <AppBarButton Icon="Account" Label="Account"/>
-                        <AppBarSeparator/>
-                        <AppBarButton Icon="AlignCenter" Label="Align Center" MinWidth="96"/>
-                        <AppBarButton Icon="AlignLeft" Label="Align Left" MinWidth="120"/>
-                        <AppBarButton Icon="AlignRight" Label="Align Right" MinWidth="96"/>
-                        <AppBarSeparator/>
-                        <AppBarButton Icon="Add" Label="Add">
-                            <AppBarButton.Flyout>
-                                <MenuFlyout>
-                                    <MenuFlyoutItem Text="MenuFlyout Item 1"/>
-                                    <MenuFlyoutItem Text="MenuFlyout Item 2"/>
-                                    <MenuFlyoutItem Text="MenuFlyout Item 3"/>
-                                </MenuFlyout>
-                            </AppBarButton.Flyout>
-                        </AppBarButton>
-                        <AppBarButton Icon="AddFriend" Label="Add Friend"/>
-                        <AppBarSeparator/>
-                        <AppBarButton Icon="Edit" Label="Edit"/>
-                        <AppBarButton Icon="Save" Label="Save"/>
-                        <AppBarButton Icon="Clear" Label="Clear"/>
-                        <AppBarSeparator/>
-                        <AppBarButton Icon="Phone" Label="Call"/>
-                        <AppBarButton Icon="Video" Label="Video"/>
-                        <CommandBar.SecondaryCommands>
-                            <AppBarButton Label="Menu Item 1"/>
-                            <AppBarButton Label="Menu Item 2"/>
-                            <AppBarButton Label="Menu Item 3"/>
-                            <AppBarButton Label="Menu Item 4"/>
-                        </CommandBar.SecondaryCommands>
-                    </local:DynamicCommandBar>
-                </Grid>
+                <local:DynamicCommandBar VerticalAlignment="Bottom" ContentMinWidth="196" Grid.Row="1">
+                    <local:DynamicCommandBar.Content>
+                        <TextBlock Style="{ThemeResource SubtitleTextBlockStyle}" VerticalAlignment="Top" Margin="12,8" Text="Content Area"/>
+                    </local:DynamicCommandBar.Content>
+                    <AppBarButton Icon="Accept" Label="Accept"/>
+                    <AppBarButton Icon="Account" Label="Account"/>
+                    <AppBarSeparator/>
+                    <AppBarButton Icon="AlignCenter" Label="Align Center" MinWidth="96"/>
+                    <AppBarButton Icon="AlignLeft" Label="Align Left" MinWidth="120"/>
+                    <AppBarButton Icon="AlignRight" Label="Align Right" MinWidth="96"/>
+                    <AppBarSeparator/>
+                    <AppBarButton Icon="Add" Label="Add">
+                        <AppBarButton.Flyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="MenuFlyout Item 1"/>
+                                <MenuFlyoutItem Text="MenuFlyout Item 2"/>
+                                <MenuFlyoutItem Text="MenuFlyout Item 3"/>
+                            </MenuFlyout>
+                        </AppBarButton.Flyout>
+                    </AppBarButton>
+                    <AppBarButton Icon="AddFriend" Label="Add Friend"/>
+                    <AppBarSeparator/>
+                    <AppBarButton Icon="Edit" Label="Edit"/>
+                    <AppBarButton Icon="Save" Label="Save"/>
+                    <AppBarButton Icon="Clear" Label="Clear"/>
+                    <AppBarSeparator/>
+                    <AppBarButton Icon="Phone" Label="Call"/>
+                    <AppBarButton Icon="Video" Label="Video"/>
+                    <CommandBar.SecondaryCommands>
+                        <AppBarButton Label="Menu Item 1"/>
+                        <AppBarButton Label="Menu Item 2"/>
+                        <AppBarButton Label="Menu Item 3"/>
+                        <AppBarButton Label="Menu Item 4"/>
+                    </CommandBar.SecondaryCommands>
+                </local:DynamicCommandBar>
 
                 <!-- Status Block for providing messages to the user.  Use the
              NotifyUser() method to populate the message -->
