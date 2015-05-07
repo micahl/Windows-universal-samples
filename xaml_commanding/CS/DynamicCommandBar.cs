@@ -32,7 +32,7 @@ namespace Commanding
             moreButton = this.GetTemplateChild("MoreButton") as Button;
         }
 
-        // Store the item, the width before moving, if it is a separator, and if it appears in the overflow
+        // Store the item and the width before moving
         private Stack<Tuple<ICommandBarElement, double>> overflow = new Stack<Tuple<ICommandBarElement, double>>();
         private Queue<Tuple<ICommandBarElement, double>> separatorQueue = new Queue<Tuple<ICommandBarElement, double>>();
         private double separatorQueueWidth = 0.0;
@@ -73,7 +73,7 @@ namespace Commanding
 
                 requestedWidth -= element.DesiredSize.Width;
 
-                if (this.overflow.Count == 0 && !(element is AppBarSeparator))
+                if (this.overflow.Count == 0 && this.SecondaryCommands.Count > 0 && !(element is AppBarSeparator))
                 {
                     // Insert a separator to differentiate between the items that were already in the overflow versus
                     // those we moved
@@ -118,8 +118,9 @@ namespace Commanding
 
                 this.SecondaryCommands.RemoveAt(0);
 
-                if (this.overflow.Count == 1)
+                if (this.overflow.Count == 1 && this.SecondaryCommands.Count > 1)
                 {
+                    // must be the separator injected earlier
                     overflow.Pop();
                     this.SecondaryCommands.RemoveAt(0);
                 }

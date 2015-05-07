@@ -45,7 +45,7 @@ namespace Commanding
 		static DependencyProperty^ _contentMinWidthProperty;
 		Button^ _moreButton;
 
-		// Store the item, the width before moving, if it is a separator, and if it appears in the overflow
+		// Store the item and the width before moving
 		std::stack<std::tuple<ICommandBarElement^, double>> overflow = { };
 		std::queue<std::tuple<ICommandBarElement^, double>> separatorQueue = { };
 		double separatorQueueWidth = 0.0;

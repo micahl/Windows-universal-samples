@@ -74,7 +74,7 @@ namespace Commanding
 
 			requestedWidth -= element->DesiredSize.Width;
 
-			if (overflow.size() == 0 && dynamic_cast<AppBarSeparator^>(element) == nullptr)
+			if (overflow.size() == 0 && SecondaryCommands->Size > 0 && dynamic_cast<AppBarSeparator^>(element) == nullptr)
 			{
 				// Insert a separator to differentiate between the items that were already in the overflow versus
 				// those we moved
@@ -131,8 +131,9 @@ namespace Commanding
 
 			SecondaryCommands->RemoveAt(0);
 
-			if (overflow.size() == 1)
+			if (overflow.size() == 1 && SecondaryCommands->Size > 1)
 			{
+				// must be the separator injected earlier	
 				overflow.pop();
 				SecondaryCommands->RemoveAt(0);
 			}
