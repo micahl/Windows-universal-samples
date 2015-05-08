@@ -21,7 +21,7 @@
             </c:PageHeader.HeaderContent>
         </c:PageHeader>
 
-        <ScrollViewer Grid.Row="1" EntranceNavigationTransitionInfo.IsTargetElement="True" Margin="12,4">
+        <ScrollViewer Grid.Row="1" EntranceNavigationTransitionInfo.IsTargetElement="True" Margin="12,4,0,0">
             <StackPanel >
                 <TextBlock Style="{ThemeResource TitleTextBlockStyle}">Top-Level Navigation</TextBlock>
                 <TextBlock Style="{ThemeResource BodyTextBlockStyle}" Margin="12,4">This sample demonstrates a universal Windows app with top-level navigation.</TextBlock>
