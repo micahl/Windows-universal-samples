@@ -67,11 +67,6 @@ namespace NavigationMenuSample
                 this.TogglePaneButton.Focus(FocusState.Programmatic);
             };
 
-            this.RootSplitView.RegisterPropertyChangedCallback(SplitView.DisplayModeProperty, (sender, args) =>
-            {
-                this.CheckTogglePaneButtonSizeChanged();
-            });
-
             SystemNavigationManager.GetForCurrentView().BackRequested += SystemNavigationManager_BackRequested;
 
             // If on a phone device that has hardware buttons then we hide the app's back button.
