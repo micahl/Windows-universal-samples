@@ -29,11 +29,11 @@ Scenario7_CustomContent::Scenario7_CustomContent()
 
 void Scenario7_CustomContent::CommandBar_Opening(Platform::Object^ sender, Platform::Object^ e)
 {
-	appbarbutton->IsCompact != appbarbutton->IsCompact;
+	appbarbutton->IsCompact = !appbarbutton->IsCompact;
 }
 
 
 void Scenario7_CustomContent::CommandBar_Closed(Platform::Object^ sender, Platform::Object^ e)
 {
-	appbarbutton->IsCompact != appbarbutton->IsCompact;
+	appbarbutton->IsCompact = !appbarbutton->IsCompact;
 }
