@@ -25,14 +25,17 @@ namespace Commanding
 	public:
 		static property DependencyProperty^ ContentMinWidthProperty
 		{
-			Windows::UI::Xaml::DependencyProperty^ get();
+			DependencyProperty^ get()
+			{
+				return _contentMinWidthProperty;
+			}
 		}
 
 		property double ContentMinWidth
 		{
 			double get()
 			{
-				return safe_cast<double>(GetValue(ContentMinWidthProperty));
+				return (double)GetValue(ContentMinWidthProperty);
 			}
 
 			void set(double value)

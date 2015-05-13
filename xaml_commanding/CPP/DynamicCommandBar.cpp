@@ -26,11 +26,6 @@ namespace Commanding
 			TypeName(DynamicCommandBar::typeid),
 			ref new PropertyMetadata(0.0));
 
-	DependencyProperty^ DynamicCommandBar::ContentMinWidthProperty::get()
-	{
-		return _contentMinWidthProperty;
-	}
-
 	void DynamicCommandBar::OnApplyTemplate()
 	{
 		CommandBar::OnApplyTemplate();
