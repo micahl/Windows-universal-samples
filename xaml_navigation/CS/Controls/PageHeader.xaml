@@ -19,7 +19,6 @@
     <Grid x:Name="grid" Background="{x:Bind Background}">
         <Grid x:Name="titleBar">
             <ContentPresenter x:Name="content"
-                              Canvas.ZIndex="0"
                               VerticalAlignment="{x:Bind VerticalContentAlignment}"
                               HorizontalAlignment="{x:Bind HorizontalContentAlignment}"
                               Margin="{x:Bind Padding}"
